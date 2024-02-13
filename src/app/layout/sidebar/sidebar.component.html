@@ -6,7 +6,7 @@
       <a
         role="button"
         class="d-flex align-items-center col-sm-auto col-12 justify-content-center"
-        routerLink="/home"
+        routerLink="home"
         (click)="onMenuItemClick()"
       >
         <img
@@ -17,23 +17,43 @@
         />
       </a>
     </li>
-    <li class="nav-item" routerLinkActive="active" (click)="onMenuItemClick()">
-      <a role="button" class="nav-link px-2 fw-bolder" routerLink="/home">
+    <li class="nav-item" (click)="onMenuItemClick()">
+      <a
+        role="button"
+        class="nav-link px-2 fw-bolder"
+        routerLink="home"
+        [ngClass]="{ active: activeItem === 'home' }"
+      >
         {{ "Budget" | uppercase }}
       </a>
     </li>
     <li class="nav-item" routerLinkActive="active" (click)="onMenuItemClick()">
-      <a role="button" class="nav-link px-2 fw-bolder" routerLink="/expenses">
+      <a
+        role="button"
+        class="nav-link px-2 fw-bolder"
+        routerLink="expenses"
+        [ngClass]="{ active: activeItem === 'expenses' }"
+      >
         {{ "Expenses" | uppercase }}
       </a>
     </li>
     <li class="nav-item" routerLinkActive="active" (click)="onMenuItemClick()">
-      <a role="button" class="nav-link px-2 fw-bolder" routerLink="/summary">
+      <a
+        role="button"
+        class="nav-link px-2 fw-bolder"
+        routerLink="summary"
+        [ngClass]="{ active: activeItem === 'summary' }"
+      >
         {{ "Summary" | uppercase }}
       </a>
     </li>
     <li class="nav-item" routerLinkActive="active" (click)="onMenuItemClick()">
-      <a role="button" class="nav-link px-2 fw-bolder" routerLink="/history">
+      <a
+        role="button"
+        class="nav-link px-2 fw-bolder"
+        routerLink="history"
+        [ngClass]="{ active: activeItem === 'history' }"
+      >
         {{ "History" | uppercase }}
       </a>
     </li>
