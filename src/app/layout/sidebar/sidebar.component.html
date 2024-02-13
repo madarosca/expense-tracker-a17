@@ -6,14 +6,14 @@
       <a
         role="button"
         class="d-flex align-items-center col-sm-auto col-12 justify-content-center"
-        routerLink="home"
+        routerLink="/"
         (click)="onMenuItemClick()"
       >
         <img
           src="./assets/img/expenses.png"
           class="img-fluid"
           width="50px"
-          alt="Budget"
+          alt="Expenses"
         />
       </a>
     </li>
@@ -21,8 +21,8 @@
       <a
         role="button"
         class="nav-link px-2 fw-bolder"
-        routerLink="home"
-        [ngClass]="{ active: activeItem === 'home' }"
+        routerLink="/"
+        [ngClass]="{ active: activeItem === '/' }"
       >
         {{ "Budget" | uppercase }}
       </a>
@@ -32,7 +32,7 @@
         role="button"
         class="nav-link px-2 fw-bolder"
         routerLink="expenses"
-        [ngClass]="{ active: activeItem === 'expenses' }"
+        [ngClass]="{ active: activeItem === '/expenses' }"
       >
         {{ "Expenses" | uppercase }}
       </a>
@@ -42,7 +42,7 @@
         role="button"
         class="nav-link px-2 fw-bolder"
         routerLink="summary"
-        [ngClass]="{ active: activeItem === 'summary' }"
+        [ngClass]="{ active: activeItem === '/summary' }"
       >
         {{ "Summary" | uppercase }}
       </a>
@@ -52,14 +52,14 @@
         role="button"
         class="nav-link px-2 fw-bolder"
         routerLink="history"
-        [ngClass]="{ active: activeItem === 'history' }"
+        [ngClass]="{ active: activeItem === '/history' }"
       >
         {{ "History" | uppercase }}
       </a>
     </li>
   </ul>
   <hr />
-  <div class="px-2 align-self-center">
+  <div class="px-2 align-self-center align-self-md-start">
     <a
       role="button"
       class="d-block link-dark text-decoration-none dropdown-toggle"
@@ -81,10 +81,7 @@
         <li class="nav-item">
           <a class="dropdown-item" role="button">Settings</a>
         </li>
-        <li class="nav-item">
-          <a class="dropdown-item" role="button">Information</a>
-        </li>
-        <li class="nav-item">
+        <li class="nav-item" (click)="onSignOut()">
           <a class="dropdown-item" role="button">Sign out</a>
         </li>
       </ul>

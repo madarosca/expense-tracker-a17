@@ -1,7 +1,7 @@
-<div class="row">
+<div class="p-4">
   <p class="h5 text-center"><b>Weekly expenses</b></p>
 </div>
-<div class="row" #table>
+<div class="p-4" #table>
   <p-table
     #dt
     [columns]="cols"
@@ -69,11 +69,11 @@
     </ng-template>
   </p-table>
 </div>
-<div class="accordion accordion-flush row g-0" id="chartsAccordion">
+<div class="accordion accordion-flush row g-0 p-4" id="chartsAccordion">
   <div class="accordion-item">
     <h2 class="accordion-header" id="categoryHeading">
       <button
-        class="accordion-button collapsed"
+        class="accordion-button collapsed px-0"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapseCategory"
@@ -104,7 +104,7 @@
   <div class="accordion-item">
     <h2 class="accordion-header" id="daysHeading">
       <button
-        class="accordion-button collapsed"
+        class="accordion-button collapsed px-0"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#collapseDays"

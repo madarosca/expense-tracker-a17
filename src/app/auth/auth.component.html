@@ -1,1 +1,49 @@
-<p>auth works!</p>
+<div class="h-100 d-flex align-items-center justify-content-center">
+  <main class="form-signin">
+    <form class="row gy-2" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+      <img
+        class="mb-4"
+        src="./assets/img/trim-expenses.jpg"
+        class="img-fluid"
+        width="100%"
+        alt="Budget"
+      />
+      <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
+
+      <div class="form-group">
+        <label for="userName">Email address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="userName"
+          name="userName"
+          placeholder="name@example.com"
+          required
+          ngModel
+        />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="password"
+          name="password"
+          placeholder="Password"
+          required
+          ngModel
+        />
+      </div>
+      <div class="checkbox my-3">
+        <label>
+          <input type="checkbox" value="remember-me" /> Remember me
+        </label>
+      </div>
+      <div>
+        <button class="w-100 btn btn-md btn-primary" type="submit">
+          Sign in
+        </button>
+      </div>
+    </form>
+  </main>
+</div>

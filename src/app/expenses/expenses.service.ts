@@ -37,6 +37,7 @@ export class ExpensesService {
   setExpensesByDay(selectedDay: string) {
     let expensesByDay = [];
     const expenses = this.expenses;
+    this.selectedDay = selectedDay;
 
     if (selectedDay === 'budget') {
       return;
@@ -55,7 +56,6 @@ export class ExpensesService {
       expensesByDay = this.expenses[selectedDay];
     }
 
-    this.selectedDay = selectedDay;
     this.expensesByDay = expensesByDay;
     this.expensesChanged.next(this.expensesByDay.slice());
   }
@@ -84,6 +84,24 @@ export class ExpensesService {
   }
 
   getExpensesByDay() {
+    let expensesByDay = [];
+    const expenses = this.expenses;
+
+    console.log(this.selectedDay);
+
+    if (!this.selectedDay) {
+      expensesByDay = Object.keys(expenses)
+        .map(function (item) {
+          return expenses[item].length
+            ? expenses[item].map((val) => {
+                return { ...val, day: item };
+              })
+            : [{ day: item }];
+        })
+        .flat();
+
+      return expensesByDay;
+    }
     return this.expensesByDay.slice();
   }
 
