@@ -1,0 +1,73 @@
+<div class="h-100 d-flex flex-md-column justify-content-center">
+  <ul
+    class="nav flex-md-column mb-auto align-items-center align-items-md-start"
+  >
+    <li class="nav-item pb-0 pb-md-5 pt-2 pt-md-3 align-self-center">
+      <a
+        role="button"
+        class="d-flex align-items-center col-sm-auto col-12 justify-content-center"
+        routerLink="/home"
+        (click)="onMenuItemClick()"
+      >
+        <img
+          src="./assets/img/expenses.png"
+          class="img-fluid"
+          width="50px"
+          alt="Budget"
+        />
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" (click)="onMenuItemClick()">
+      <a role="button" class="nav-link px-2 fw-bolder" routerLink="/home">
+        {{ "Budget" | uppercase }}
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" (click)="onMenuItemClick()">
+      <a role="button" class="nav-link px-2 fw-bolder" routerLink="/expenses">
+        {{ "Expenses" | uppercase }}
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" (click)="onMenuItemClick()">
+      <a role="button" class="nav-link px-2 fw-bolder" routerLink="/summary">
+        {{ "Summary" | uppercase }}
+      </a>
+    </li>
+    <li class="nav-item" routerLinkActive="active" (click)="onMenuItemClick()">
+      <a role="button" class="nav-link px-2 fw-bolder" routerLink="/history">
+        {{ "History" | uppercase }}
+      </a>
+    </li>
+  </ul>
+  <hr />
+  <div class="px-2 align-self-center">
+    <a
+      role="button"
+      class="d-block link-dark text-decoration-none dropdown-toggle"
+      data-bs-toggle="collapse"
+      data-bs-target="#account-collapse"
+      aria-expanded="false"
+    >
+      <img
+        src="./assets/img/profile.jpg"
+        alt="Profile"
+        width="40"
+        height="40"
+        class="rounded-circle me-2"
+      />
+      <span class="d-none d-md-inline"><strong>Profile</strong></span>
+    </a>
+    <div class="collapse" id="account-collapse">
+      <ul class="nav flex-column small align-content-center">
+        <li class="nav-item">
+          <a class="dropdown-item" role="button">Settings</a>
+        </li>
+        <li class="nav-item">
+          <a class="dropdown-item" role="button">Information</a>
+        </li>
+        <li class="nav-item">
+          <a class="dropdown-item" role="button">Sign out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

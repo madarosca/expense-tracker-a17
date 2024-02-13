@@ -1,0 +1,22 @@
+<div class="row g-0 px-4 ps-md-2 py-3 justify-content-between">
+  <div class="row g-0 col-md-2 offset-md-2">
+    <a
+      class="btn btn-outline-secondary rounded-0 btn-sm"
+      type="button"
+      [routerLink]="selectedDay"
+      (click)="onPrevious()"
+    >
+      {{ previous | titlecase }}
+    </a>
+  </div>
+  <div class="row gx-0 gy-1 gy-md-0 col-md-2">
+    <a
+      class="btn btn-outline-secondary rounded-0 btn-sm"
+      type="button"
+      [routerLink]="selectedDay"
+      (click)="onNext()"
+    >
+      {{ next | titlecase }}
+    </a>
+  </div>
+</div>
